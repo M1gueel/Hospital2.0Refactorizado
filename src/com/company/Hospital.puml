@@ -1,0 +1,24 @@
+@startuml
+class Hospital {
+    + agregarPacienteALaLista ()
+}
+
+class Paciente {
+    - sexo : Sexo
+    - edad : int
+    - enfermedad: Enfermedad
+    - esAportante: boolean
+}
+
+
+Hospital --> "*"Paciente
+Paciente --> Enfermedad
+
+
+Enfermedad <|-- EnfermedadCritica
+Enfermedad <|-- EnfermedadEstable
+
+
+
+
+@enduml
